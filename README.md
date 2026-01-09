@@ -6,7 +6,7 @@
   body {
     margin: 0; padding: 0;
     font-family: 'Khmer OS System', Arial, sans-serif;
-    background-image: url('"images/photo_2026-01-09_21-49-10.jpg"');
+    background-image: url('["images/photo_2026-01-09_21-49-10.jpg"](https://github.com/noumpovpotdara-hue/sombaththuu.github.io/blob/main/images/photo_2026-01-09_21-49-10.jpg)');
     background-size: cover;
     background-position: center;
     color: white;
