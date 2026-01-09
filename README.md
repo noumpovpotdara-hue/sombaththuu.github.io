@@ -1,12 +1,17 @@
+<!DOCTYPE html>
 <html lang="km">
 <head>
 <meta charset="UTF-8" />
 <title>សេវាកម្មម៉ាស្សា និង ក្លៀក សម្បត្តិធូរព្យាបាលមុខ</title>
+
+<!-- Google Fonts for Khmer -->
+<link href="https://fonts.googleapis.com/css2?family=Battambang&display=swap" rel="stylesheet">
+
 <style>
   body {
     margin: 0; padding: 0;
     font-family: 'Khmer OS System', Arial, sans-serif;
-    background-image: url('["images/photo_2026-01-09_21-49-10.jpg"](https://github.com/noumpovpotdara-hue/sombaththuu.github.io/blob/main/images/photo_2026-01-09_21-49-10.jpg)');
+    background-image: url('https://raw.githubusercontent.com/noumpovpotdara-hue/sombaththuu.github.io/main/images/photo_2026-01-09_21-49-10.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -27,9 +32,9 @@
     padding: 20px;
     border-radius: 10px;
     width: 320px;
-    text-align: left; /* រៀបខាងឆ្វេង */
-    margin-left: 20px; /* ចន្លោះខាងឆ្វេង */
-    font-size: 18px; /* អក្សរតូចជាង */
+    text-align: left;
+    margin-left: 20px;
+    font-size: 18px;
   }
   .service h2 { font-size: 20px; margin-bottom: 10px; font-family: 'Battambang', serif;}
   button.selectBtn {
@@ -166,21 +171,15 @@ const detailsData = {
 divs.forEach(btnDiv => {
   const btn = btnDiv.querySelector('.selectBtn');
   btn.addEventListener('click', () => {
-    // លាក់ div ទាំងអស់
     divs.forEach(d => d.style.display = 'none');
-
-    // បង្ហាញ details
     const key = btnDiv.dataset.details;
     detailsList.innerHTML = detailsData[key].map((item, idx) => `<li>${item}</li>`).join('');
     detailsDiv.style.display = 'block';
-
-    // បង្ហាញ back button
     backBtn.style.display = 'block';
   });
 });
 
 backBtn.addEventListener('click', () => {
-  // បង្ហាញ div ទាំងអស់វិញ
   divs.forEach(d => d.style.display = 'block');
   detailsDiv.style.display = 'none';
   backBtn.style.display = 'none';
